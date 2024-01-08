@@ -1,0 +1,14 @@
+name: Deploy on push-job  # Give your workflow a descriptive name
+
+on:  # Define the events that trigger the workflow
+  push:
+    branches: [main]  # Adjust the branch name as needed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Specify the environment for your job
+
+    steps:
+      - uses: actions/checkout@v3  # Checkout your repository's code
+      - name: Deploy  # Replace this with the actual deployment command or action
+        run: echo "Deploying code..."  # Replace this with your deployment steps
